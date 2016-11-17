@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Werror -std=c++14   CMakeFiles/list_exe.dir/list.cpp.o  -o list_exe -rdynamic 
