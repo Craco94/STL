@@ -124,6 +124,19 @@ array_exe/fast:
 .PHONY : array_exe/fast
 
 #=============================================================================
+# Target rules for targets named set_exe
+
+# Build rule for target.
+set_exe: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 set_exe
+.PHONY : set_exe
+
+# fast build rule for target.
+set_exe/fast:
+	$(MAKE) -f CMakeFiles/set_exe.dir/build.make CMakeFiles/set_exe.dir/build
+.PHONY : set_exe/fast
+
+#=============================================================================
 # Target rules for targets named vector_exe
 
 # Build rule for target.
@@ -216,6 +229,33 @@ list.cpp.s:
 	$(MAKE) -f CMakeFiles/list_exe.dir/build.make CMakeFiles/list_exe.dir/list.cpp.s
 .PHONY : list.cpp.s
 
+set.o: set.cpp.o
+
+.PHONY : set.o
+
+# target to build an object file
+set.cpp.o:
+	$(MAKE) -f CMakeFiles/set_exe.dir/build.make CMakeFiles/set_exe.dir/set.cpp.o
+.PHONY : set.cpp.o
+
+set.i: set.cpp.i
+
+.PHONY : set.i
+
+# target to preprocess a source file
+set.cpp.i:
+	$(MAKE) -f CMakeFiles/set_exe.dir/build.make CMakeFiles/set_exe.dir/set.cpp.i
+.PHONY : set.cpp.i
+
+set.s: set.cpp.s
+
+.PHONY : set.s
+
+# target to generate assembly for a file
+set.cpp.s:
+	$(MAKE) -f CMakeFiles/set_exe.dir/build.make CMakeFiles/set_exe.dir/set.cpp.s
+.PHONY : set.cpp.s
+
 vector.o: vector.cpp.o
 
 .PHONY : vector.o
@@ -279,6 +319,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... array_exe"
+	@echo "... set_exe"
 	@echo "... vector_exe"
 	@echo "... vector2_exe"
 	@echo "... list_exe"
@@ -288,6 +329,9 @@ help:
 	@echo "... list.o"
 	@echo "... list.i"
 	@echo "... list.s"
+	@echo "... set.o"
+	@echo "... set.i"
+	@echo "... set.s"
 	@echo "... vector.o"
 	@echo "... vector.i"
 	@echo "... vector.s"
