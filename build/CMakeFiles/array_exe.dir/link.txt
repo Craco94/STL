@@ -1,1 +1,1 @@
-/usr/bin/c++   -Wall -Werror -std=c++14   CMakeFiles/array_exe.dir/array.cpp.o  -o array_exe -rdynamic 
+/usr/bin/c++   -Wall -std=c++17   CMakeFiles/array_exe.dir/array.cpp.o  -o array_exe -rdynamic 

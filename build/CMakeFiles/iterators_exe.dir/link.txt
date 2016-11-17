@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -std=c++17   CMakeFiles/iterators_exe.dir/iterators.cpp.o  -o iterators_exe -rdynamic 

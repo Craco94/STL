@@ -1,1 +1,1 @@
-/usr/bin/c++   -Wall -Werror -std=c++14   CMakeFiles/set_exe.dir/set.cpp.o  -o set_exe -rdynamic 
+/usr/bin/c++   -Wall -std=c++17   CMakeFiles/set_exe.dir/set.cpp.o  -o set_exe -rdynamic 
