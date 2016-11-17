@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named array_exe
+
+# Build rule for target.
+array_exe: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 array_exe
+.PHONY : array_exe
+
+# fast build rule for target.
+array_exe/fast:
+	$(MAKE) -f CMakeFiles/array_exe.dir/build.make CMakeFiles/array_exe.dir/build
+.PHONY : array_exe/fast
+
+#=============================================================================
 # Target rules for targets named vector_exe
 
 # Build rule for target.
@@ -124,17 +137,17 @@ vector_exe/fast:
 .PHONY : vector_exe/fast
 
 #=============================================================================
-# Target rules for targets named array_exe
+# Target rules for targets named vector2_exe
 
 # Build rule for target.
-array_exe: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 array_exe
-.PHONY : array_exe
+vector2_exe: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 vector2_exe
+.PHONY : vector2_exe
 
 # fast build rule for target.
-array_exe/fast:
-	$(MAKE) -f CMakeFiles/array_exe.dir/build.make CMakeFiles/array_exe.dir/build
-.PHONY : array_exe/fast
+vector2_exe/fast:
+	$(MAKE) -f CMakeFiles/vector2_exe.dir/build.make CMakeFiles/vector2_exe.dir/build
+.PHONY : vector2_exe/fast
 
 array.o: array.cpp.o
 
@@ -190,6 +203,33 @@ vector.cpp.s:
 	$(MAKE) -f CMakeFiles/vector_exe.dir/build.make CMakeFiles/vector_exe.dir/vector.cpp.s
 .PHONY : vector.cpp.s
 
+vector2.o: vector2.cpp.o
+
+.PHONY : vector2.o
+
+# target to build an object file
+vector2.cpp.o:
+	$(MAKE) -f CMakeFiles/vector2_exe.dir/build.make CMakeFiles/vector2_exe.dir/vector2.cpp.o
+.PHONY : vector2.cpp.o
+
+vector2.i: vector2.cpp.i
+
+.PHONY : vector2.i
+
+# target to preprocess a source file
+vector2.cpp.i:
+	$(MAKE) -f CMakeFiles/vector2_exe.dir/build.make CMakeFiles/vector2_exe.dir/vector2.cpp.i
+.PHONY : vector2.cpp.i
+
+vector2.s: vector2.cpp.s
+
+.PHONY : vector2.s
+
+# target to generate assembly for a file
+vector2.cpp.s:
+	$(MAKE) -f CMakeFiles/vector2_exe.dir/build.make CMakeFiles/vector2_exe.dir/vector2.cpp.s
+.PHONY : vector2.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -197,15 +237,19 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... rebuild_cache"
-	@echo "... vector_exe"
 	@echo "... array_exe"
+	@echo "... vector_exe"
+	@echo "... vector2_exe"
+	@echo "... rebuild_cache"
 	@echo "... array.o"
 	@echo "... array.i"
 	@echo "... array.s"
 	@echo "... vector.o"
 	@echo "... vector.i"
 	@echo "... vector.s"
+	@echo "... vector2.o"
+	@echo "... vector2.i"
+	@echo "... vector2.s"
 .PHONY : help
 
 

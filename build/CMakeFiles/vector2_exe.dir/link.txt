@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Werror -std=c++14   CMakeFiles/vector2_exe.dir/vector2.cpp.o  -o vector2_exe -rdynamic 
