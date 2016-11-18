@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named bind_exe
+
+# Build rule for target.
+bind_exe: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bind_exe
+.PHONY : bind_exe
+
+# fast build rule for target.
+bind_exe/fast:
+	$(MAKE) -f CMakeFiles/bind_exe.dir/build.make CMakeFiles/bind_exe.dir/build
+.PHONY : bind_exe/fast
+
+#=============================================================================
 # Target rules for targets named unordered_set_exe
 
 # Build rule for target.
@@ -227,6 +240,33 @@ array.s: array.cpp.s
 array.cpp.s:
 	$(MAKE) -f CMakeFiles/array_exe.dir/build.make CMakeFiles/array_exe.dir/array.cpp.s
 .PHONY : array.cpp.s
+
+bind.o: bind.cpp.o
+
+.PHONY : bind.o
+
+# target to build an object file
+bind.cpp.o:
+	$(MAKE) -f CMakeFiles/bind_exe.dir/build.make CMakeFiles/bind_exe.dir/bind.cpp.o
+.PHONY : bind.cpp.o
+
+bind.i: bind.cpp.i
+
+.PHONY : bind.i
+
+# target to preprocess a source file
+bind.cpp.i:
+	$(MAKE) -f CMakeFiles/bind_exe.dir/build.make CMakeFiles/bind_exe.dir/bind.cpp.i
+.PHONY : bind.cpp.i
+
+bind.s: bind.cpp.s
+
+.PHONY : bind.s
+
+# target to generate assembly for a file
+bind.cpp.s:
+	$(MAKE) -f CMakeFiles/bind_exe.dir/build.make CMakeFiles/bind_exe.dir/bind.cpp.s
+.PHONY : bind.cpp.s
 
 iterators.o: iterators.cpp.o
 
@@ -398,6 +438,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... bind_exe"
 	@echo "... unordered_set_exe"
 	@echo "... iterators_exe"
 	@echo "... array_exe"
@@ -408,6 +449,9 @@ help:
 	@echo "... array.o"
 	@echo "... array.i"
 	@echo "... array.s"
+	@echo "... bind.o"
+	@echo "... bind.i"
+	@echo "... bind.s"
 	@echo "... iterators.o"
 	@echo "... iterators.i"
 	@echo "... iterators.s"
